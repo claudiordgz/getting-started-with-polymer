@@ -1,0 +1,41 @@
+
+/* getting-started-with-polymer.css from getting-started-with-polymer.tex
+(TeX4ht, 2016-01-31 19:05:00) */
+  .likechapterHead{display: none;}
+.sectionToc{display: none;}
+.subsectionToc{display: none;}
+.subsubsectionToc{display: none;}
+#scrollableTabs {height: 100%;}
+.chapterToc + a {display: none;}
+.chapterToc {text-transform: uppercase;}
+.likesectionHead{display:none;}
+ pre span.pln:first-child, .listings + span.pln, pre > a + span.pln  {  display: none;  }
+pre.prettyprint, pre.listings {  margin: 0;  }
+ .ss-image__container {
+    width: 100%;
+}
+
+.ss-image {
+    display:block;
+    margin: auto;
+}
+
+@media screen and (min-width: 1024px){
+    .ss-image {
+        max-width: 75%;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .ss-image {
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .ss-image {
+        max-width: 98%;
+    }
+}
+
+

@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>1 Web Components</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- xhtml,charset=utf-8,epub,html --> 
+<meta name="src" content="getting-started-with-polymer.tex" /> 
+<meta name="date" content="2016-01-31 19:05:00" /> 
+<link rel="stylesheet" type="text/css" href="getting-started-with-polymer.css" /> 
+</head><body 
+>
+   <!--l. 1--><div class="crosslinks"><p class="noindent"></p></div>
+   <h2 class="chapterHead"><span class="titlemark">Chapter 1</span><br /><a 
+ id="x3-20001"></a>Web Components</h2>
+<!--l. 1--><p class="noindent" ><a 
+ id="chap:chapter01"></a>
+</p><!--l. 3--><p class="indent" >   Web Components is a new set of standards that we can use to create complex UI
+widgets and application pieces. One platform for creating Web Components is
+Polymer, developed by Google.
+</p><!--l. 7--><p class="indent" >   A Web Component contains elements that contain templates, styles, and logic,
+all encapsulated in that component. They have four specifications which
+are:
+</p>
+     <ul class="itemize1">
+     <li class="itemize">Templates
+     </li>
+     <li class="itemize">Shadow Dom
+     </li>
+     <li class="itemize">Custom Elements
+     </li>
+     <li class="itemize">HTML Imports</li></ul>
+<a 
+ id="x3-2001r1"></a>
+<h3 class="sectionHead"><span class="titlemark">1.1   </span> <a 
+ id="x3-30001"></a>Templates</h3>
+<!--l. 17--><p class="noindent" ><a 
+ id="sec:firstSection"></a>
+</p><!--l. 20--><p class="indent" >   Templates are fragments of HTML for which the content is not loaded, until you
+get its content using Javascript without using AJAX, such content can be saved
+inside the <span 
+class="ec-lmtt-10">&#x003C;template&#x003E; </span>and retrieved later.
+</p>
+   <!--l. 23--><div class="lstinputlisting">
+<a 
+ id="x3-3001"></a>
+   <span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3002r1"></a></span><span 
+class="ec-lmtt-10">&#x003C;</span><span 
+class="ec-lmtt-10">template</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">class</span><span 
+class="ec-lmtt-10">=&#x0022;</span><span 
+class="ec-lmtt-10">superman</span><span 
+class="ec-lmtt-10">&#x0022;&#x003E;</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3003r2"></a></span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">&#x003C;</span><span 
+class="ec-lmtt-10">div</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">class</span><span 
+class="ec-lmtt-10">=&#x0022;</span><span 
+class="ec-lmtt-10">boomshakalaka</span><span 
+class="ec-lmtt-10">&#x0022;&#x003E;</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3004r3"></a></span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">&#x003C;</span><span 
+class="ec-lmtt-10">p</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">class</span><span 
+class="ec-lmtt-10">=&#x0022;</span><span 
+class="ec-lmtt-10">title</span><span 
+class="ec-lmtt-10">&#x0022;&#x003E;</span><span 
+class="ec-lmtt-10">This</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">is</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">the</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">Superman</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">Component</span><span 
+class="ec-lmtt-10">&#x003C;/</span><span 
+class="ec-lmtt-10">p</span><span 
+class="ec-lmtt-10">&#x003E;</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3005r4"></a></span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">&#x003C;/</span><span 
+class="ec-lmtt-10">div</span><span 
+class="ec-lmtt-10">&#x003E;</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3006r5"></a></span><span 
+class="ec-lmtt-10">&#x003C;/</span><span 
+class="ec-lmtt-10">template</span><span 
+class="ec-lmtt-10">&#x003E;</span>
+   
+   </div>
+<!--l. 25--><p class="indent" >   The element is pulled doing something as follows:
+</p>
+   <!--l. 27--><div class="lstinputlisting">
+<a 
+ id="x3-3007"></a>
+   <span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3008r1"></a></span><span 
+class="ec-lmtt-10">//</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">NOTE</span><span 
+class="ec-lmtt-10">:</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">Using</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">webapck</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3009r2"></a></span><span 
+class="ec-lmtt-10">require</span><span 
+class="ec-lmtt-10">(&#x2019;./</span><span 
+class="ec-lmtt-10">superman</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">scss</span><span 
+class="ec-lmtt-10">&#x2019;);</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3010r3"></a></span><span 
+class="ec-lmtt-10">//</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">Load</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">the</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">template</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">in</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">the</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">body</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3011r4"></a></span><span 
+class="ec-lmtt-10">document</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">body</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">innerHTML</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">=</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">require</span><span 
+class="ec-lmtt-10">(&#x0022;./</span><span 
+class="ec-lmtt-10">superman</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">html</span><span 
+class="ec-lmtt-10">&#x0022;)</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">+</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">document</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">body</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">innerHTML</span><span 
+class="ec-lmtt-10">;</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3012r5"></a></span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3013r6"></a></span><span 
+class="ec-lmtt-10">//</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">Retrieve</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">the</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">markup</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3014r7"></a></span><span 
+class="ec-lmtt-10">var</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">supermanTemplate</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">=</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">document</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">querySelector</span><span 
+class="ec-lmtt-10">(&#x2019;.</span><span 
+class="ec-lmtt-10">superman</span><span 
+class="ec-lmtt-10">&#x2019;);</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3015r8"></a></span><span 
+class="ec-lmtt-10">var</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">supermanContent</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">=</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">supermanTemplate</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">content</span><span 
+class="ec-lmtt-10">;</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3016r9"></a></span><span 
+class="ec-lmtt-10">//</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">Add</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">the</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">img</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">picture</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3017r10"></a></span><span 
+class="ec-lmtt-10">var</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">supermanPicture</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">=</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">document</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">createElement</span><span 
+class="ec-lmtt-10">(&#x2019;</span><span 
+class="ec-lmtt-10">img</span><span 
+class="ec-lmtt-10">&#x2019;);</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3018r11"></a></span><span 
+class="ec-lmtt-10">supermanPicture</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">classList</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">add</span><span 
+class="ec-lmtt-10">(&#x2019;</span><span 
+class="ec-lmtt-10">animated_superman</span><span 
+class="ec-lmtt-10">&#x2019;);</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3019r12"></a></span><span 
+class="ec-lmtt-10">supermanPicture</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">src</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">=</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">require</span><span 
+class="ec-lmtt-10">(&#x0022;../../</span><span 
+class="ec-lmtt-10">assets</span><span 
+class="ec-lmtt-10">/</span><span 
+class="ec-lmtt-10">img</span><span 
+class="ec-lmtt-10">/</span><span 
+class="ec-lmtt-10">superman</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">png</span><span 
+class="ec-lmtt-10">&#x0022;);</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3020r13"></a></span><span 
+class="ec-lmtt-10">supermanPicture</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">width</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">=</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">500;</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3021r14"></a></span><span 
+class="ec-lmtt-10">supermanContent</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">querySelector</span><span 
+class="ec-lmtt-10">(&#x2019;.</span><span 
+class="ec-lmtt-10">boomshakalaka</span><span 
+class="ec-lmtt-10">&#x2019;).</span><span 
+class="ec-lmtt-10">appendChild</span><span 
+class="ec-lmtt-10">(</span><span 
+class="ec-lmtt-10">supermanPicture</span><span 
+class="ec-lmtt-10">);</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3022r15"></a></span><span 
+class="ec-lmtt-10">//</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">Import</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">it</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">to</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">the</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">document</span><span 
+class="ec-lmtt-10">,</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">don</span><span 
+class="ec-lmtt-10">&#x2019;</span><span 
+class="ec-lmtt-10">t</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">forget</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">the</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">2</span><span 
+class="ec-lmtt-10">nd</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">argument</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3023r16"></a></span><span 
+class="ec-lmtt-10">var</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">result</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">=</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">document</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">importNode</span><span 
+class="ec-lmtt-10">(</span><span 
+class="ec-lmtt-10">supermanContent</span><span 
+class="ec-lmtt-10">,</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">true</span><span 
+class="ec-lmtt-10">);</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3024r17"></a></span><span 
+class="ec-lmtt-10">document</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">body</span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">appendChild</span><span 
+class="ec-lmtt-10">(</span><span 
+class="ec-lmtt-10">result</span><span 
+class="ec-lmtt-10">);</span>
+   
+   </div>
+                                                                  
+
+                                                                  
+<!--l. 29--><p class="indent" >   Of course a component wouldn&#x2019;t be complete with some styling attached to
+it:
+</p>
+   <!--l. 31--><div class="lstinputlisting">
+<a 
+ id="x3-3027"></a>
+   <span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3028r1"></a></span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">boomshakalaka</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">{</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3029r2"></a></span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">border</span><span 
+class="ec-lmtt-10">:</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">5</span><span 
+class="ec-lmtt-10">px</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">solid</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">rgba</span><span 
+class="ec-lmtt-10">(200,</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">0,</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">0,</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">0.7);</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3030r3"></a></span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">padding</span><span 
+class="ec-lmtt-10">:</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">15</span><span 
+class="ec-lmtt-10">px</span><span 
+class="ec-lmtt-10">;</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3031r4"></a></span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">margin</span><span 
+class="ec-lmtt-10">:</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">15</span><span 
+class="ec-lmtt-10">px</span><span 
+class="ec-lmtt-10">;</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3032r5"></a></span><span 
+class="ec-lmtt-10">}</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3033r6"></a></span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3034r7"></a></span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">boomshakalaka</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">.</span><span 
+class="ec-lmtt-10">title</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">{</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3035r8"></a></span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">font</span><span 
+class="ec-lmtt-10">-</span><span 
+class="ec-lmtt-10">family</span><span 
+class="ec-lmtt-10">:</span><span 
+class="ec-lmtt-10"> </span><span 
+class="ec-lmtt-10">sans</span><span 
+class="ec-lmtt-10">-</span><span 
+class="ec-lmtt-10">serif</span><span 
+class="ec-lmtt-10">;</span><span 
+class="ec-lmtt-10"> </span><br /><span class="label"><a 
+ id="x3-3036r9"></a></span><span 
+class="ec-lmtt-10">}</span>
+   
+   </div>
+<!--l. 33--><p class="indent" >   To pull this we are using webpack. The original image I&#x2019;m using is 1361x561, but
+we modify that property on load to get an the following:
+</p><!--l. 36--><p class="indent" >   <img 
+src="./src/images/screenshot--superman.png" alt="PIC"  
+ />
+<a 
+ id="x3-3037r3"></a>
+</p>
+<h3 class="sectionHead"><span class="titlemark">1.2   </span> <a 
+ id="x3-40002"></a>Ways of adding templates</h3>
+<!--l. 38--><p class="noindent" ><a 
+ id="sec:01--adding-templates"></a>
+</p><!--l. 41--><p class="indent" >   There are essentially four ways of adding templates
+<a 
+ id="x3-4001r1"></a>
+</p>
+<h4 class="subsectionHead"><span class="titlemark">1.2.1   </span> <a 
+ id="x3-50001"></a>Hidden elements</h4>
+<!--l. 43--><p class="noindent" ><a 
+ id="ssec:01--hidden-elements"></a>
+</p><!--l. 46--><p class="indent" >   Copy/Pasting it the hardcore way.
+</p>
+   <!--l. 48-->
+   <div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x3-5001r1"></a></span>&#x003C;div hidden data<span 
+class="lmsy-10">−</span>template=&#x0022;superman&#x0022;&#x003E; <br /><span class="label"><a 
+ id="x3-5002r2"></a></span>    &#x003C;div&#x003E; <br /><span class="label"><a 
+ id="x3-5003r3"></a></span>        &#x003C;p&#x003E;SuperMan Template&#x003C;/p&#x003E; <br /><span class="label"><a 
+ id="x3-5004r4"></a></span>        &#x003C;img src=&#x0022;assets/img/superman.png&#x0022; class=&#x0022;animated_superman&#x0022;/&#x003E; <br /><span class="label"><a 
+ id="x3-5005r5"></a></span>    &#x003C;/div&#x003E; <br /><span class="label"><a 
+ id="x3-5006r6"></a></span>&#x003C;/div&#x003E;
+   
+   </div>
+<!--l. 57--><p class="indent" >   <span 
+class="ec-lmr-17x-x-120">CONS: The browser loads unnecessary</span>
+<span 
+class="ec-lmr-17x-x-120">markup, and when pasted it wont load the</span>
+<span 
+class="ec-lmr-17x-x-120">images, video, audio.</span>
+<a 
+ id="x3-5007r8"></a>
+</p>
+<h4 class="subsectionHead"><span class="titlemark"><span 
+class="ec-lmr-17x-x-120">1.2.2   </span></span> <a 
+ id="x3-60002"></a><span 
+class="ec-lmr-17x-x-120">Ajax all the things</span></h4>
+<!--l. 59--><p class="noindent" ><a 
+ id="ssec:01--pull-content"></a>
+                                                                  
+
+                                                                  
+</p><!--l. 62--><p class="indent" >   <span 
+class="ec-lmr-17x-x-120">CONS: Unnecessary noise. Pulling it by</span>
+<span 
+class="ec-lmr-17x-x-120">Ajax is downright a bad implementation.</span>
+<span 
+class="ec-lmr-17x-x-120">Somebody could inject bad code using Cross</span>
+<span 
+class="ec-lmr-17x-x-120">Site Script.</span>
+<a 
+ id="x3-6001r9"></a>
+</p>
+<h4 class="subsectionHead"><span class="titlemark"><span 
+class="ec-lmr-17x-x-120">1.2.3   </span></span> <a 
+ id="x3-70003"></a><span 
+class="ec-lmr-17x-x-120">Use a local script template</span></h4>
+<!--l. 65--><p class="noindent" ><a 
+ id="ssec:01--x-template"></a>
+</p>
+   <!--l. 68-->
+   <div class="lstlisting" id="listing-2"><span class="label"><a 
+ id="x3-7001r1"></a></span><span 
+class="ec-lmr-17x-x-120">&#x003C;</span><span 
+class="ec-lmr-17x-x-120">script</span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120">data</span><span 
+class="lmsy-10x-x-207">−</span><span 
+class="ec-lmr-17x-x-120">template</span><span 
+class="ec-lmr-17x-x-120">=&#x0022;</span><span 
+class="ec-lmr-17x-x-120">superman</span><span 
+class="ec-lmr-17x-x-120">&#x0022;</span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120">type</span><span 
+class="ec-lmr-17x-x-120">=&#x0022;</span><span 
+class="ec-lmr-17x-x-120">x</span><span 
+class="lmsy-10x-x-207">−</span><span 
+class="ec-lmr-17x-x-120">template</span><span 
+class="ec-lmr-17x-x-120">&#x0022;&#x003E;</span><span 
+class="ec-lmr-17x-x-120"> </span><br /><span class="label"><a 
+ id="x3-7002r2"></a></span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120">&#x003C;</span><span 
+class="ec-lmr-17x-x-120">div</span><span 
+class="ec-lmr-17x-x-120">&#x003E;</span><span 
+class="ec-lmr-17x-x-120"> </span><br /><span class="label"><a 
+ id="x3-7003r3"></a></span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120">&#x003C;</span><span 
+class="ec-lmr-17x-x-120">p</span><span 
+class="ec-lmr-17x-x-120">&#x003E;</span><span 
+class="ec-lmr-17x-x-120">SuperMan</span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120">Template</span><span 
+class="ec-lmr-17x-x-120">&#x003C;/</span><span 
+class="ec-lmr-17x-x-120">p</span><span 
+class="ec-lmr-17x-x-120">&#x003E;</span><span 
+class="ec-lmr-17x-x-120"> </span><br /><span class="label"><a 
+ id="x3-7004r4"></a></span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120">&#x003C;</span><span 
+class="ec-lmr-17x-x-120">img</span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120">src</span><span 
+class="ec-lmr-17x-x-120">=&#x0022;</span><span 
+class="ec-lmr-17x-x-120">assets</span><span 
+class="ec-lmr-17x-x-120">/</span><span 
+class="ec-lmr-17x-x-120">img</span><span 
+class="ec-lmr-17x-x-120">/</span><span 
+class="ec-lmr-17x-x-120">superman</span><span 
+class="ec-lmr-17x-x-120">.</span><span 
+class="ec-lmr-17x-x-120">png</span><span 
+class="ec-lmr-17x-x-120">&#x0022;</span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120">class</span><span 
+class="ec-lmr-17x-x-120">=&#x0022;</span><span 
+class="ec-lmr-17x-x-120">animated_superman</span><span 
+class="ec-lmr-17x-x-120">&#x0022;/&#x003E;</span><span 
+class="ec-lmr-17x-x-120"> </span><br /><span class="label"><a 
+ id="x3-7005r5"></a></span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120"> </span><span 
+class="ec-lmr-17x-x-120">&#x003C;/</span><span 
+class="ec-lmr-17x-x-120">div</span><span 
+class="ec-lmr-17x-x-120">&#x003E;</span><span 
+class="ec-lmr-17x-x-120"> </span><br /><span class="label"><a 
+ id="x3-7006r6"></a></span><span 
+class="ec-lmr-17x-x-120">&#x003C;/</span><span 
+class="ec-lmr-17x-x-120">script</span><span 
+class="ec-lmr-17x-x-120">&#x003E;</span>
+   
+   </div>
+<!--l. 77--><p class="indent" >   <span 
+class="ec-lmr-17x-x-120">CONS: Unnecessary noise when working</span>
+<span 
+class="ec-lmr-17x-x-120">with strings.</span>
+<a 
+ id="x3-7007r10"></a>
+</p>
+<h4 class="subsectionHead"><span class="titlemark"><span 
+class="ec-lmr-17x-x-120">1.2.4   </span></span> <a 
+ id="x3-80004"></a><span 
+class="ec-lmr-17x-x-120">Compiled templates</span></h4>
+<!--l. 79--><p class="noindent" ><a 
+ id="ssec:01--compiled-templates"></a>
+</p><!--l. 82--><p class="indent" >   <span 
+class="ec-lmr-17x-x-120">A Template engine handles it and you</span>
+<span 
+class="ec-lmr-17x-x-120">work with the string.</span>
+                                                                  
+
+                                                                  
+</p><!--l. 84--><p class="indent" >   <span 
+class="ec-lmr-17x-x-120">CONS: Unneceessary noise when working</span>
+<span 
+class="ec-lmr-17x-x-120">with strings.</span>
+<a 
+ id="x3-8001r7"></a>
+</p>
+<h3 class="sectionHead"><span class="titlemark"><span 
+class="ec-lmr-17x-x-120">1.3   </span></span> <a 
+ id="x3-90003"></a><span 
+class="ec-lmr-17x-x-120">Shadow DOM</span></h3>
+<!--l. 86--><p class="noindent" ><a 
+ id="sec:01--shadow-dom"></a>
+</p><!--l. 89--><p class="indent" >   <span 
+class="ec-lmr-17x-x-120">The </span><span 
+class="ec-lmtt-12x-x-172">audio</span><span 
+class="ec-lmr-17x-x-120">, </span><span 
+class="ec-lmtt-12x-x-172">video</span><span 
+class="ec-lmr-17x-x-120">, </span><span 
+class="ec-lmtt-12x-x-172">a</span><span 
+class="ec-lmr-17x-x-120">, </span><span 
+class="ec-lmtt-12x-x-172">input </span><span 
+class="ec-lmr-17x-x-120">are de best</span>
+<span 
+class="ec-lmr-17x-x-120">examples to describe the functionality</span>
+<span 
+class="ec-lmr-17x-x-120">provided by the Shaodw DOM. Those</span>
+<span 
+class="ec-lmr-17x-x-120">elements are web components, and we don&#x2019;t</span>
+<span 
+class="ec-lmr-17x-x-120">see the internal implementation of these</span>
+<span 
+class="ec-lmr-17x-x-120">tags.</span>
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+</p>
+   <!--l. 2--><div class="crosslinks"><p class="noindent"></p></div>
+    
+</body></html> 

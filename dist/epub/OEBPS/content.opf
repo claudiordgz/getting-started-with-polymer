@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<package xmlns="http://www.idpf.org/2007/opf"
+unique-identifier="dcidid" version="2.0">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:title>Web Components - Polymer Study Notes</dc:title>
+    <dc:language>en-US</dc:language>
+    <dc:identifier id="dcidid" opf:scheme="URI">
+    http://example.com/getting-started-with-polymer</dc:identifier>
+    <dc:creator>claudiordgz</dc:creator>
+    <dc:date>2016-01-31T19:05:00Z</dc:date>
+  </metadata>
+  <manifest>
+    <item id="ncx" href="getting-started-with-polymer.ncx"
+    media-type="application/x-dtbncx+xml" />
+    <item id="stylesheet" href="getting-started-with-polymer.css"
+    media-type="text/css" />
+    <item id="file1" href="getting-started-with-polymer.html"
+    media-type="application/xhtml+xml" />
+    <item id="file2" href="getting-started-with-polymerli1.html"
+    media-type="application/xhtml+xml" />
+    <item id="file3" href="getting-started-with-polymerch1.html"
+    media-type="application/xhtml+xml" />
+    <item id="file4" href="getting-started-with-polymerch2.html"
+    media-type="application/xhtml+xml" />
+    <item id="file5" href="getting-started-with-polymerch3.html"
+    media-type="application/xhtml+xml" />
+    <item id="file6" href="getting-started-with-polymerch4.html"
+    media-type="application/xhtml+xml" />
+    <item id="file7" href="getting-started-with-polymerch5.html"
+    media-type="application/xhtml+xml" />
+    <item id="file8" href="getting-started-with-polymerch6.html"
+    media-type="application/xhtml+xml" />
+    <item id="file9" href="getting-started-with-polymerch7.html"
+    media-type="application/xhtml+xml" />
+    <item id="file10" href="getting-started-with-polymerch8.html"
+    media-type="application/xhtml+xml" />
+    <item id="file11" href="getting-started-with-polymerch9.html"
+    media-type="application/xhtml+xml" />
+    <item id="file12" href="getting-started-with-polymerch10.html"
+    media-type="application/xhtml+xml" />
+    <item id="file13" href="getting-started-with-polymerch11.html"
+    media-type="application/xhtml+xml" />
+    <item id="file14" href="getting-started-with-polymerch12.html"
+    media-type="application/xhtml+xml" />
+    <item id="file15" href="getting-started-with-polymerch13.html"
+    media-type="application/xhtml+xml" />
+    <item id="file16" href="getting-started-with-polymerch14.html"
+    media-type="application/xhtml+xml" />
+    <item id="file17" href="getting-started-with-polymerch15.html"
+    media-type="application/xhtml+xml" />
+    <item id='.-src-imagesscreenshot--superman_png'
+    href='./src/images/screenshot--superman.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer0x_png'
+    href='getting-started-with-polymer0x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer1x_png'
+    href='getting-started-with-polymer1x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer2x_png'
+    href='getting-started-with-polymer2x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer3x_png'
+    href='getting-started-with-polymer3x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer4x_png'
+    href='getting-started-with-polymer4x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer5x_png'
+    href='getting-started-with-polymer5x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer6x_png'
+    href='getting-started-with-polymer6x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer7x_png'
+    href='getting-started-with-polymer7x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer8x_png'
+    href='getting-started-with-polymer8x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer9x_png'
+    href='getting-started-with-polymer9x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer10x_png'
+    href='getting-started-with-polymer10x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer11x_png'
+    href='getting-started-with-polymer11x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer12x_png'
+    href='getting-started-with-polymer12x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer13x_png'
+    href='getting-started-with-polymer13x.png'
+    media-type='image/png' />
+    <item id='getting-started-with-polymer14x_png'
+    href='getting-started-with-polymer14x.png'
+    media-type='image/png' />
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="file1" />
+    <itemref idref="file2" />
+    <itemref idref="file3" />
+    <itemref idref="file4" />
+    <itemref idref="file5" />
+    <itemref idref="file6" />
+    <itemref idref="file7" />
+    <itemref idref="file8" />
+    <itemref idref="file9" />
+    <itemref idref="file10" />
+    <itemref idref="file11" />
+    <itemref idref="file12" />
+    <itemref idref="file13" />
+    <itemref idref="file14" />
+    <itemref idref="file15" />
+    <itemref idref="file16" />
+    <itemref idref="file17" />
+  </spine>
+  <guide></guide>
+</package>
