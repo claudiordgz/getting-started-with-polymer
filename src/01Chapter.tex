@@ -1,10 +1,11 @@
 \stchapter{chap:chapter01}{Web Components}
 
-Web Components is a new set of standards that we can use to create complex UI widgets and application pieces. One platform
-for creating Web Components is Polymer, developed by Google.
+Web Components is a new set of standards that we can use to create complex UI
+widgets and application pieces. One platform for creating Web Components is
+Polymer, developed by Google.
 
-A Web Component contains elements that contain templates, styles, and logic, all encapsulated in that component. They have
-four specifications which are:
+A Web Component contains elements that contain templates, styles, and logic,
+all encapsulated in that component. They have four specifications which are:
 
 \begin{itemize}
     \item Templates
@@ -13,36 +14,78 @@ four specifications which are:
     \item HTML Imports
 \end{itemize}
 
+\stsection{sec:firstSection}{Templates}{}{}\label{sec:01--templates}
+
+
 Templates are fragments of HTML for which the content is not loaded, until you get its content using Javascript without
 using AJAX, such content can be saved inside the \texttt{<template>} and retrieved later.
 
+\lstinputlisting{./code/src/chapter01/components/superman/superman.html}
+
+The element is pulled doing something as follows:
+
+\lstinputlisting{./code/src/chapter01/components/superman/superman.js}
+
+Of course a component wouldn't be complete with some styling attached to it:
+
+\lstinputlisting{./code/src/chapter01/components/superman/superman.scss}
+
+To pull this we are using webpack. The original image I'm using is 1361x561, but we modify that
+property on load to get an the following:
+
+\includegraphics[width=0.5\linewidth]{./src/images/screenshot--superman.png}
+
+\stsection{sec:01--adding-templates}{Ways of adding templates}{}{}
+\label{sec:01--adding-templates}
+
+There are essentially four ways of adding templates
+
+\stsubsection{ssec:01--hidden-elements}{Hidden elements}{}{}
+\label{ssec:01--hidden-elements}
+
+Copy/Pasting it the hardcore way.
+
 \begin{lstlisting}
-<template class="superman">
+<div hidden data-template="superman">
     <div>
-        <img src="assets/img/superman.png" class="animated_superman" />
+        <p>SuperMan Template</p>
+        <img src="assets/img/superman.png" class="animated_superman"/>
     </div>
-</template>
+</div>
 \end{lstlisting}
 
-\stsection{sec:firstSection}{First Section}{}{}\label{sec:firstSection}
+\huge{CONS:} The browser loads unnecessary markup, and when pasted it wont load the images, video, audio.
 
-\blindtext
+\stsubsection{ssec:01--pull-content}{Ajax all the things}{}{}
+\label{ssec:01--pull-content}
 
-\blindenumerate
+\huge{CONS:} Unnecessary noise. Pulling it by Ajax is downright a bad implementation.
+Somebody could inject bad code using Cross Site Script.
 
-\stsubsection{ssec:firstSubSection}{Furst SubSection}{}{}
-\label{ssec:firstSubSection}
+\stsubsection{ssec:01--x-template}{Use a local script template}{}{}
+\label{ssec:01--x-template}
 
-\blindtext
+\begin{lstlisting}
+<script data-template="superman" type="x-template">
+    <div>
+        <p>SuperMan Template</p>
+        <img src="assets/img/superman.png" class="animated_superman"/>
+    </div>
+</script>
+\end{lstlisting}
 
-\blinditemize
+\huge{CONS:} Unnecessary noise when working with strings.
 
-\blindtext
+\stsubsection{ssec:01--compiled-templates}{Compiled templates}{}{}
+\label{ssec:01--compiled-templates}
 
-\blinddescription
+A Template engine handles it and you work with the string.
 
-\stsubsubsection{sssec:example01}{1 sub sub section}{chap:chapter01}{} \label{sssec:example01}
+\huge{CONS:} Unneceessary noise when working with strings.
 
-\blindtext
+\stsection{sec:01--shadow-dom}{Shadow DOM}{}{}
+\label{sec:01--shadow-dom}
 
-\blindmathpaper
+The \texttt{audio}, \texttt{video}, \texttt{a}, \texttt{input} are de best examples to describe the
+functionality provided by the Shaodw DOM. Those elements are web components, and we don't see the
+internal implementation of these tags.

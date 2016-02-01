@@ -1,0 +1,43 @@
+{
+  "name": "studies--getting-started-with-polymer",
+  "version": "1.0.0",
+  "description": "The code notes related to Getting Started with Polymer book",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "test": "webpack test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/claudiordgz/getting-started-with-polymer"
+  },
+  "keywords": [
+    "polymer",
+    "web",
+    "components",
+    "html",
+    "javascript",
+    "css",
+    "webpack",
+    "bower",
+    "npm"
+  ],
+  "author": "claudiordgz",
+  "license": "LGPL-3.0",
+  "devDependencies": {
+    "baggage-loader": "^0.2.4",
+    "file-loader": "^0.8.5",
+    "html-loader": "^0.4.0",
+    "polymer-loader": "^1.0.0",
+    "script-loader": "^0.6.1",
+    "source-map": "^0.5.3",
+    "url-loader": "^0.5.7",
+    "vulcanize-loader": "^0.3.1",
+    "webpack": "^1.12.12",
+    "css-loader": "^0.23.1",
+    "imports-loader": "^0.6.5",
+    "node-sass": "^3.4.2",
+    "resolve-url-loader": "^1.4.3",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0"
+  }
+}
