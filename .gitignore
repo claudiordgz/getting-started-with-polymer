@@ -3,3 +3,4 @@
 node_modules
 assets/vendor
 !assets/vendor/paper-header-panel/paper-header-panel.css
+!assets/vendor/webcomponentsjs/webcomponents-lite.min.js
